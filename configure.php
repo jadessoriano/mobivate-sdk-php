@@ -127,7 +127,7 @@ function setupTestingLibrary(string $testingLibrary): void
 {
     if ($testingLibrary === 'pest') {
         unlink(__DIR__.'/tests/ExampleTestPhpunit.php');
-        unlink(__DIR__.'/.github/workflows/run-tests-phpunit.yml');
+        unlink(__DIR__ . '/.github/workflows/run-tests.yml');
 
         rename(
             from: __DIR__.'/tests/ExampleTestPest.php',
@@ -157,7 +157,7 @@ function setupTestingLibrary(string $testingLibrary): void
         );
 
         rename(
-            from: __DIR__.'/.github/workflows/run-tests-phpunit.yml',
+            from: __DIR__ . '/.github/workflows/run-tests.yml',
             to: __DIR__.'/.github/workflows/run-tests.yml'
         );
 
