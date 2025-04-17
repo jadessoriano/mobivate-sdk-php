@@ -1,45 +1,61 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "jadessoriano/mobivate-sdk-php",
+    "description": "Mobivate SDK for PHP",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "jadessoriano",
+        "mobivate",
+        "sms",
+        "php"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/jadessoriano/mobivate-sdk-php",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
-            "role": "Developer"
+            "name": "Jade Sigua Soriano",
+            "email": "jadesiguasoriano@gmail.com",
+            "role": "Backend Developer"
         }
     ],
     "require": {
-        "php": "^8.4"
+        "php": "^8.2",
+        "ext-json": "*"
     },
     "require-dev": {
-        :require_dev_testing,
-        :require_dev_codestyle,
-        "spatie/ray": "^1.28"
+        "laravel/pint": "^1.5",
+        "mockery/mockery": "^1.4",
+        "pestphp/pest": "^3.7.4",
+        "phly/keep-a-changelog": "^2.11",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0.1",
+        "phpstan/phpstan-phpunit": "^2.0.4",
+        "rector/rector": "^2.0.9",
+        "spatie/ray": "^1.28",
+        "ticketswap/phpstan-error-formatter": "^1.1"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Jadessoriano\\Mobivate\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Jadessoriano\\Mobivate\\Tests\\": "tests"
         }
     },
     "scripts": {
-        :scripts_testing,
-        :scripts_codestyle
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest -p",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "refactor": "vendor/bin/rector process",
+        "refactor-dry-run": "vendor/bin/rector process --dry-run",
+        "format" : "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            :plugins_testing,
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true,
             "phpstan/extension-installer": true
         }
     },
