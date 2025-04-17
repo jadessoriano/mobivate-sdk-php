@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
 function ask(string $question, string $default = ''): string
 {
     $answer = readline($question.($default ? " ({$default})" : null).': ');
@@ -23,7 +25,7 @@ function askWithOptions(string $question, array $options, string $default = ''):
 
     $validOptions = implode(', ', $options);
 
-    while (! in_array($answer, $options)) {
+    while (! in_array($answer, $options, true)) {
         if ($default && $answer === '') {
             $answer = $default;
 
@@ -127,7 +129,7 @@ function setupTestingLibrary(string $testingLibrary): void
 {
     if ($testingLibrary === 'pest') {
         unlink(__DIR__.'/tests/ExampleTestPhpunit.php');
-        unlink(__DIR__ . '/.github/workflows/run-tests.yml');
+        unlink(__DIR__.'/.github/workflows/run-tests.yml');
 
         rename(
             from: __DIR__.'/tests/ExampleTestPest.php',
@@ -157,7 +159,7 @@ function setupTestingLibrary(string $testingLibrary): void
         );
 
         rename(
-            from: __DIR__ . '/.github/workflows/run-tests.yml',
+            from: __DIR__.'/.github/workflows/run-tests.yml',
             to: __DIR__.'/.github/workflows/run-tests.yml'
         );
 
