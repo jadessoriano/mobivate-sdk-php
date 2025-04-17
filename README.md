@@ -29,7 +29,7 @@ You can install the package via composer:
 composer require jadessoriano/mobivate-sdk-php
 ```
 
-## Single Send Message
+## [Single Send Message](https://wiki.mobivatebulksms.com/use-cases/send-single-sms-message)
 
 ```php
 
