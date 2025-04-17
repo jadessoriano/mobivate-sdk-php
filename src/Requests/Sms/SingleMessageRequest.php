@@ -23,8 +23,7 @@ class SingleMessageRequest extends BaseRequest
         public string $routeId = 'mglobal',
         public ?string $reference = null,
         public ?string $campaignId = null,
-    ) {
-    }
+    ) {}
 
     public static function fromArray(array $data): static
     {
