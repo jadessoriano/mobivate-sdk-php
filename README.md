@@ -1,4 +1,6 @@
-# :package_description
+![Mobivate SDK PHP](https://github.com/user-attachments/assets/073b640e-628f-4360-a89b-1a8f0b9c59fc)
+
+# Mobivate SDK for PHP (WIP)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
 [![Tests](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions/workflows/run-tests.yml)
