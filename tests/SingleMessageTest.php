@@ -39,7 +39,7 @@ it('send single message', function () {
         )
     )
         ->execute(
-            (new Message())
+            (new Message)
                 ->setOriginator('Test')
                 ->setRecipient('44700011122')
                 ->setBody('This is a test message')
