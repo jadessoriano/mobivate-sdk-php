@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
 
       - name: Run PHP CS Fixer
         uses: docker://oskarstark/php-cs-fixer-ga
@@ -28,3 +26,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Fix styling
+          branch: ${{ github.ref_name }}  # 👈 THIS is the magic fix
