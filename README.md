@@ -39,7 +39,7 @@ use Jadessoriano\Mobivate\Requests\Sms\SingleMessageRequest;
 
 $credentials = new Basic('api_live_abcd1234efgh5678ijkl9012mnop3456');
 
-$response = (new SingleMessageClient($singleMessage))
+$response = (new SingleMessageClient($credentials))
     ->execute(
         (new SingleMessageRequest())
             ->setOriginator('Test')
