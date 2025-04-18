@@ -25,7 +25,7 @@ it('throws config exception', function () {
         )
     )
         ->execute(
-            (new Message)
+            (new Message())
                 ->setRecipient('44700011122')
                 ->setBody('This is a test message')
                 ->setRouteId('mglobal')
