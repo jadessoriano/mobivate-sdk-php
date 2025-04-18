@@ -7,14 +7,14 @@ namespace Jadessoriano\Mobivate\Requests\Sms;
 use Jadessoriano\Mobivate\Requests\BaseRequest;
 
 /**
- * @method SingleMessageRequest setOriginator(?string $originator = null)
- * @method SingleMessageRequest setRecipient(?string $recipient = null)
- * @method SingleMessageRequest setBody(?string $body = null)
- * @method SingleMessageRequest setRouteId(string $routeId)
- * @method SingleMessageRequest setReference(string $reference)
- * @method SingleMessageRequest setCampaignId(string $campaignId)
+ * @method Message setOriginator(?string $originator = null)
+ * @method Message setRecipient(?string $recipient = null)
+ * @method Message setBody(?string $body = null)
+ * @method Message setRouteId(string $routeId)
+ * @method Message setReference(string $reference)
+ * @method Message setCampaignId(string $campaignId)
  */
-class SingleMessageRequest extends BaseRequest
+class Message extends BaseRequest
 {
     public function __construct(
         public ?string $originator = null,

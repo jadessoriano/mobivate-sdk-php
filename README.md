@@ -34,14 +34,14 @@ composer require jadessoriano/mobivate-sdk-php
 ```php
 
 use Jadessoriano\Mobivate\Client\Credentials\Basic;
-use Jadessoriano\Mobivate\Client\Sms\SingleMessageClient;
-use Jadessoriano\Mobivate\Requests\Sms\SingleMessageRequest;
+use Jadessoriano\Mobivate\Client\Sms\SendSingle;
+use Jadessoriano\Mobivate\Requests\Sms\Message;
 
 $credentials = new Basic('api_live_abcd1234efgh5678ijkl9012mnop3456');
 
-$response = (new SingleMessageClient($singleMessage))
+$response = (new SendSingle($credentials))
     ->execute(
-        (new SingleMessageRequest())
+        (new Message())
             ->setOriginator('Test')
             ->setRecipient('44700011122')
             ->setBody('This is a test message')
