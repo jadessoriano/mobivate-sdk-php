@@ -41,11 +41,11 @@ $credentials = new Basic('api_live_abcd1234efgh5678ijkl9012mnop3456');
 
 $response = (new SendSingle($credentials))
     ->execute(
-        (new Message())
-            ->setOriginator('Test')
-            ->setRecipient('44700011122')
-            ->setBody('This is a test message')
-            ->setRouteId('mglobal')
+        new Message(
+            originator: 'Test',
+            recipient: '44700011122',
+            body: 'This is a test message',
+        )
     )
 
 ```
