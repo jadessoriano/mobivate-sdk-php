@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Jadessoriano\Mobivate\Client\Sms;
 
 use Jadessoriano\Mobivate\Client\BaseClient;
-use Jadessoriano\Mobivate\Requests\Sms\SingleMessageRequest;
+use Jadessoriano\Mobivate\Requests\Sms\Message;
 use Jadessoriano\Mobivate\Responses\MessageResponse;
 
-readonly class SingleMessageClient extends BaseClient
+readonly class SendSingle extends BaseClient
 {
     public static function uri(): string
     {
@@ -18,7 +18,7 @@ readonly class SingleMessageClient extends BaseClient
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function execute(SingleMessageRequest $request): MessageResponse
+    public function execute(Message $request): MessageResponse
     {
         $response = $this->post(['json' => $request]);
 

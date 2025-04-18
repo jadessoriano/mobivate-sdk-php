@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
-use Jadessoriano\Mobivate\Client\Sms\SingleMessageClient;
-use Jadessoriano\Mobivate\Requests\Sms\SingleMessageRequest;
+use Jadessoriano\Mobivate\Client\Sms\SendSingle;
+use Jadessoriano\Mobivate\Requests\Sms\Message;
 use Jadessoriano\Mobivate\Responses\MessageResponse;
 
 use function PHPUnit\Framework\assertEquals;
@@ -34,12 +34,12 @@ it('send single message', function () {
     );
 
     $singleMessageResponse = (
-        new SingleMessageClient(
+        new SendSingle(
             generateMovibateClient($mock)
         )
     )
         ->execute(
-            (new SingleMessageRequest())
+            (new Message)
                 ->setOriginator('Test')
                 ->setRecipient('44700011122')
                 ->setBody('This is a test message')
