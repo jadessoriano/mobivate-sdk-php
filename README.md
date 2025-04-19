@@ -14,10 +14,13 @@
     - [Send Single SMS Message](#single-send-sms-message)
     - [Send Batch SMS Messages](#send-batch-sms-messages)
 
+TODO List:
+
+  - Search Message Logs
+  - Search for Single Message Log
+
 ---
 <!--/delete-->
-⚠️ **This project is a work in progress.**
-May contain breaking changes or incomplete features. Use at your own risk. Contributions are welcome!
 
 ## Installation
 
