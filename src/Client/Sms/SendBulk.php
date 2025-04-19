@@ -7,10 +7,9 @@ namespace Jadessoriano\Mobivate\Client\Sms;
 use Jadessoriano\Mobivate\Client\BaseClient;
 use Jadessoriano\Mobivate\Exceptions\ConfigException;
 use Jadessoriano\Mobivate\Exceptions\SendBulkException;
-use Jadessoriano\Mobivate\Requests\Sms\BulkMessage;
-use Jadessoriano\Mobivate\Requests\Sms\Message;
+use Jadessoriano\Mobivate\Requests\Sms\Bulk\BulkMessage;
+use Jadessoriano\Mobivate\Requests\Sms\Bulk\BulkMessageItem;
 use Jadessoriano\Mobivate\Responses\BulkMessageResponse;
-use Jadessoriano\Mobivate\Responses\MessageResponse;
 
 readonly class SendBulk extends BaseClient
 {
@@ -22,8 +21,8 @@ readonly class SendBulk extends BaseClient
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Jadessoriano\Mobivate\Exceptions\ConfigException
-     * * @throws \Jadessoriano\Mobivate\Exceptions\SendBulkException
-    */
+     * @throws \Jadessoriano\Mobivate\Exceptions\SendBulkException
+     */
     public function execute(BulkMessage $request): BulkMessageResponse
     {
         $this->validateMessages($request);
@@ -46,11 +45,8 @@ readonly class SendBulk extends BaseClient
             throw SendBulkException::emptyMessage();
         }
 
-        /**
-         * @var \Jadessoriano\Mobivate\Requests\Sms\Message $message
-         */
         foreach ($request->messages as $message) {
-            if (! $message instanceof Message) {
+            if (! $message instanceof BulkMessageItem) {
                 throw SendBulkException::invalidMessage();
             }
 

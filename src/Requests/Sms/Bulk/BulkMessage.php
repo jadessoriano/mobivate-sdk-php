@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jadessoriano\Mobivate\Requests\Sms;
+namespace Jadessoriano\Mobivate\Requests\Sms\Bulk;
 
 use Jadessoriano\Mobivate\Requests\BaseRequest;
 
@@ -19,6 +19,5 @@ class BulkMessage extends BaseRequest
         public ?string $scheduleDateTime = null,
         public bool $shortenUrls = false,
         public string $routeId = 'mglobal',
-    ) {
-    }
+    ) {}
 }
