@@ -27,7 +27,7 @@ readonly class SendBatch extends BaseClient
     {
         $this->validateMessages($request);
 
-        $response = $this->post(['json' => $request]);
+        $response = $this->post(['json' => $request->toArray()]);
 
         $body = json_decode((string) $response->getBody(), true);
 
