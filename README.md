@@ -1,25 +1,30 @@
 ![Mobivate SDK PHP](https://github.com/user-attachments/assets/073b640e-628f-4360-a89b-1a8f0b9c59fc)
 
-# Mobivate SDK for PHP (WIP)
-
-
+# Mobivate Bulk SMS SDK for PHP
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jadessoriano/mobivate-sdk-php.svg?style=flat-square)](https://packagist.org/packages/jadessoriano/mobivate-sdk-php)
 [![Tests](https://img.shields.io/github/actions/workflow/status/jadessoriano/mobivate-sdk-php/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jadessoriano/mobivate-sdk-php/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/jadessoriano/mobivate-sdk-php.svg?style=flat-square)](https://packagist.org/packages/jadessoriano/mobivate-sdk-php)
 <!--delete-->
 ---
-Mobivate SDK for PHP.
+[Mobivate Bulk SMS](https://www.mobivate.com/bulk-sms) SDK for PHP:
 
 - [Installation](#installation)
 - Usage
     - [Send Single SMS Message](#single-send-sms-message)
     - [Send Batch SMS Messages](#send-batch-sms-messages)
 
+TODO List:
+
+- Search Message Logs
+- Search for Single Message Log
+
+Additional:
+
+- [Mobivate Bulk SMS for Laravel](https://github.com/jadessoriano/laravel-mobivate-sdk)
+
 ---
 <!--/delete-->
-⚠️ **This project is a work in progress.**
-May contain breaking changes or incomplete features. Use at your own risk. Contributions are welcome!
 
 ## Installation
 
@@ -108,7 +113,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [jadessoriano](https://github.com/jadessoriano)
 - [All Contributors](../../contributors)
 
 ## License
