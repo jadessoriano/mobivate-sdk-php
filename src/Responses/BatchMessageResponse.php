@@ -16,5 +16,6 @@ class BatchMessageResponse extends BaseResponse
         public bool $excludeDuplicates,
         public ?string $scheduleDateTime,
         public array $recipients,
-    ) {}
+    ) {
+    }
 }

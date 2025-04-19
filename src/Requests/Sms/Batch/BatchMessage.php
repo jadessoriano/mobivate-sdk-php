@@ -20,7 +20,8 @@ class BatchMessage extends BaseRequest
         public string|DateTimeInterface|null $scheduleDateTime = null,
         public bool $shortenUrls = false,
         public string $routeId = 'mglobal',
-    ) {}
+    ) {
+    }
 
     public function toArray(): array
     {
