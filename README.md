@@ -13,8 +13,8 @@ Mobivate SDK for PHP.
 
 - [Installation](#installation)
 - Usage
-    - [Send Single Message](#single-send-message)
-    - [Send Bulk Message](#bulk) (TODO)
+    - [Send Single SMS Message](#single-send-sms-message)
+    - [Send Batch SMS Messages](#send-batch-sms-messages)
 
 ---
 <!--/delete-->
@@ -29,7 +29,7 @@ You can install the package via composer:
 composer require jadessoriano/mobivate-sdk-php
 ```
 
-## [Single Send Message](https://wiki.mobivatebulksms.com/use-cases/send-single-sms-message)
+## [Single Send SMS Message](https://wiki.mobivatebulksms.com/use-cases/send-single-sms-message)
 
 ```php
 
@@ -45,11 +45,46 @@ $client = new MobivateClient(
 $response = (new SendSingle($client))
     ->execute(
         new Message(
-            originator: 'Test',
+            originator: 'Test',             // Optional: defaults to config value if not provided
             recipient: '44700011122',
             body: 'This is a test message',
+            reference: 'sample',            // Optional: defaults to null if not provided
+            campaignId: '1-xxx'             // Optional: defaults to null if not provided
         )
     )
+
+```
+
+## [Send Batch SMS Messages](https://wiki.mobivatebulksms.com/use-cases/send-batch-sms-messages)
+
+```php
+
+use Jadessoriano\Mobivate\Client\Credentials\Basic;
+use Jadessoriano\Mobivate\Client\Sms\SendBatch;
+use Jadessoriano\Mobivate\MobivateClient;
+use Jadessoriano\Mobivate\Requests\Sms\Batch\BatchMessage;
+use Jadessoriano\Mobivate\Requests\Sms\Batch\BatchMessageItem;
+
+$client = new MobivateClient(
+    new Basic('api_live_abcd1234efgh5678ijkl9012mnop3456')
+);
+
+/**
+ * Note: The schedule date time (for later delivery) is optional, defaults to null if not provided.
+ */
+$message = (new BatchMessage())
+    ->setMessages([
+        new BatchMessageItem(
+            originator: 'Test', // Optional: defaults to config value if not provided
+            recipient: '44700011122',
+            text: 'This is a test message'
+        )
+    ])
+    ->setScheduleDateTime(
+        new DateTime('+5 minutes', new DateTimeZone('Asia/Manila'))
+    )
+
+$response = (new SendBatch($client))->execute($message)
 
 ```
 
