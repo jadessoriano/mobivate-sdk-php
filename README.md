@@ -7,7 +7,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/jadessoriano/mobivate-sdk-php.svg?style=flat-square)](https://packagist.org/packages/jadessoriano/mobivate-sdk-php)
 <!--delete-->
 ---
-[Mobivate Bulk SMS](https://www.mobivate.com/bulk-sms) SDK for PHP.
+[Mobivate Bulk SMS](https://www.mobivate.com/bulk-sms) SDK for PHP:
 
 - [Installation](#installation)
 - Usage
@@ -16,8 +16,12 @@
 
 TODO List:
 
-  - Search Message Logs
-  - Search for Single Message Log
+- Search Message Logs
+- Search for Single Message Log
+
+Additional:
+
+- [Mobivate Bulk SMS for Laravel](https://github.com/jadessoriano/laravel-mobivate-sdk)
 
 ---
 <!--/delete-->
