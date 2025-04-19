@@ -11,7 +11,6 @@ use Jadessoriano\Mobivate\Requests\BaseRequest;
  * @method BatchMessageItem setRecipient(?string $recipient = null)
  * @method BatchMessageItem setText(?string $body = null)
  * @method BatchMessageItem setRouteId(string $routeId)
- * @method BatchMessageItem setReference(string $reference)
  */
 class BatchMessageItem extends BaseRequest
 {
@@ -20,6 +19,5 @@ class BatchMessageItem extends BaseRequest
         public ?string $recipient = null,
         public ?string $text = null,
         public string $routeId = 'mglobal',
-        public ?string $reference = null,
     ) {}
 }
