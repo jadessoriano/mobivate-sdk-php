@@ -42,4 +42,10 @@ abstract class BaseRequest
 
         return $this;
     }
+
+    public function toArray(): array
+    {
+        /** @phpstan-ignore-next-line  */
+        return json_decode(json_encode($this), true);
+    }
 }
