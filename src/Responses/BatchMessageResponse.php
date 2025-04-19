@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Jadessoriano\Mobivate\Responses;
 
-class BulkMessageResponse extends BaseResponse
+class BatchMessageResponse extends BaseResponse
 {
     public function __construct(
         public string $id,

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Jadessoriano\Mobivate\Tests;
 
-use Jadessoriano\Mobivate\Requests\Sms\Bulk\BulkMessage;
-use Jadessoriano\Mobivate\Requests\Sms\Bulk\BulkMessageItem;
+use Jadessoriano\Mobivate\Requests\Sms\Batch\BatchMessage;
+use Jadessoriano\Mobivate\Requests\Sms\Batch\BatchMessageItem;
 use Jadessoriano\Mobivate\Requests\Sms\Message;
 
 class TestHelper
@@ -23,7 +23,7 @@ class TestHelper
         }';
     }
 
-    public static function jsonBulkSendMessage(): string
+    public static function jsonBatchSendMessage(): string
     {
         return '{
            "id":"fd9157b74bd3475d8716a69683066f0f",
@@ -46,17 +46,17 @@ class TestHelper
         }';
     }
 
-    public static function buildBulkMessage(): BulkMessage
+    public static function buildBatchMessage(): BatchMessage
     {
-        return (new BulkMessage)
+        return (new BatchMessage)
             ->setMessages([
-                self::buildBulkMessageItem(),
+                self::buildBatchMessageItem(),
             ]);
     }
 
-    public static function buildBulkMessageItem(): BulkMessageItem
+    public static function buildBatchMessageItem(): BatchMessageItem
     {
-        return (new BulkMessageItem)
+        return (new BatchMessageItem)
             ->setOriginator('Test')
             ->setRecipient('44700011122')
             ->setText('This is a test message')

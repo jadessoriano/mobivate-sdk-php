@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Jadessoriano\Mobivate\Exceptions;
 
-class SendBulkException extends MobivateException
+class SendBatchException extends MobivateException
 {
     public static function emptyMessage(): self
     {
