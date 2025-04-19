@@ -25,12 +25,12 @@ beforeEach(function () {
 
     $this->client = generateMovibateClient($mock);
 
-    $this->message = (new Message)
+    $this->message = (new Message())
         ->setRecipient('44700011122')
         ->setBody('This is a test message')
         ->setRouteId('mglobal');
 
-    $this->batchMessageItem = (new BatchMessageItem)
+    $this->batchMessageItem = (new BatchMessageItem())
         ->setRecipient('44700011122')
         ->setText('This is a test message')
         ->setRouteId('mglobal');
@@ -45,7 +45,7 @@ it('throws config exception (send single)', function () {
 it('throws empty message (send batch)', function () {
     (new SendBatch($this->client))
         ->execute(
-            (new BatchMessage)
+            (new BatchMessage())
                 ->setMessages([])
         );
 })
@@ -54,7 +54,7 @@ it('throws empty message (send batch)', function () {
 it('throws config exception (send batch)', function () {
     (new SendBatch($this->client))
         ->execute(
-            (new BatchMessage)
+            (new BatchMessage())
                 ->setMessages([
                     $this->batchMessageItem,
                 ])

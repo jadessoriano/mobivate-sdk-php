@@ -15,5 +15,6 @@ class MessageResponse extends BaseResponse
         public ?string $reference = null,
         public ?string $campaignId = null,
         public bool $shortenUrls = false,
-    ) {}
+    ) {
+    }
 }

@@ -19,5 +19,6 @@ class BatchMessageItem extends BaseRequest
         public ?string $recipient = null,
         public ?string $text = null,
         public string $routeId = 'mglobal',
-    ) {}
+    ) {
+    }
 }
