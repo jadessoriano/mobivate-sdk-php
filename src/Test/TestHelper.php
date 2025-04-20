@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jadessoriano\Mobivate\Tests;
+namespace Jadessoriano\Mobivate\Test;
 
 use Jadessoriano\Mobivate\Requests\Sms\Batch\BatchMessage;
 use Jadessoriano\Mobivate\Requests\Sms\Batch\BatchMessageItem;

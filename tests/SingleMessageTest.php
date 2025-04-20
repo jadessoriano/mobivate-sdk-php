@@ -6,7 +6,7 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use Jadessoriano\Mobivate\Client\Sms\SendSingle;
 use Jadessoriano\Mobivate\Responses\MessageResponse;
-use Jadessoriano\Mobivate\Tests\TestHelper;
+use Jadessoriano\Mobivate\Test\TestHelper;
 
 use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertInstanceOf;
