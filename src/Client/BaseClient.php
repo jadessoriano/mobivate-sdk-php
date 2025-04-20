@@ -11,9 +11,7 @@ abstract readonly class BaseClient
 {
     abstract public static function uri(): string;
 
-    public function __construct(private MobivateClient $mobivateClient)
-    {
-    }
+    public function __construct(private MobivateClient $mobivateClient) {}
 
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException

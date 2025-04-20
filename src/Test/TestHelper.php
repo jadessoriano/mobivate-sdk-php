@@ -48,7 +48,7 @@ class TestHelper
 
     public static function buildBatchMessage(): BatchMessage
     {
-        return (new BatchMessage())
+        return (new BatchMessage)
             ->setMessages([
                 self::buildBatchMessageItem(),
             ]);
@@ -56,7 +56,7 @@ class TestHelper
 
     public static function buildBatchMessageItem(): BatchMessageItem
     {
-        return (new BatchMessageItem())
+        return (new BatchMessageItem)
             ->setOriginator('Test')
             ->setRecipient('44700011122')
             ->setText('This is a test message')
@@ -65,7 +65,7 @@ class TestHelper
 
     public static function buildMessage(): Message
     {
-        return (new Message())
+        return (new Message)
             ->setOriginator('Test')
             ->setRecipient('44700011122')
             ->setBody('This is a test message')
